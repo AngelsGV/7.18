@@ -46,9 +46,23 @@ public class Cola {
         }
         return resultado;
     }
-
+    //Num de elementos
+    public int numElementos(){
+        return elemento.length;
+    }
+    //Mostrar cola por consola
+    public void mostrar(){
+        System.out.println("Cola: " + Arrays.toString(elemento));
+    }
+    public void mostratPyU(){
+        System.out.println("El primero es: " + elemento[0]);
+        System.out.println("El último es: " + elemento[elemento.length-1]);
+    }
 }
 //-----------------------------------
-//Cosas que arreglar:
-//FIFO --> Arraylist
+//Inspirats en exercici resolt 7.11  i 7.12
+
+//Coses que millorar:
+//Eliminar --> elimine directamente el primero
+//Mostrar primero y ultimo --> OK
 
