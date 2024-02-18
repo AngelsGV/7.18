@@ -31,9 +31,17 @@ public class Cola {
     //Se  elimina el valor 0 y se devuelve la tabla
     Integer eliminar(){
         Integer eliminado = null;
-        eliminado = elemento[0];
+        if (elemento.length > 0) {
+            eliminado = elemento[0];
+            Integer[] nuevoElemento = new Integer[elemento.length - 1];
+            // Se copian los elementos a partir del segundo elemento del array original al nuevo array.
+            System.arraycopy(elemento, 1, nuevoElemento, 0, elemento.length - 1);
+            // Se asigna el nuevo array al atributo elemento.
+            elemento = nuevoElemento;
+        }
         return eliminado;
     }
+
 
 
     // Le pasaremos el primero y nos devolvera el elemento sin modificar la cola.
