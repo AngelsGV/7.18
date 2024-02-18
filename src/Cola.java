@@ -29,15 +29,9 @@ public class Cola {
 
 
     //Se  elimina el valor 0 y se devuelve la tabla
-    Integer eliminar(int primero){
+    Integer eliminar(){
         Integer eliminado = null;
-        if (primero >= 0 && primero < elemento.length){
-            eliminado = elemento[0];
-            for( int i = primero + 1; i< elemento.length; i++){
-                elemento[i-1] = elemento[i];
-            }
-            elemento = Arrays.copyOf(elemento,elemento.length-1);
-        }
+        eliminado = elemento[0];
         return eliminado;
     }
 

@@ -12,7 +12,7 @@ public static void main(String[] args) {
         c1.mostrar();
         c1.insertar(4);
         c1.mostrar();
-        c1.eliminar(0);
+        c1.eliminar();
         c1.mostrar();
         c1.mostratPyU();
         System.out.println("El largo de la cola es de: " + c1.numElementos());
