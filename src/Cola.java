@@ -34,9 +34,8 @@ public class Cola {
         if (elemento.length > 0) {
             eliminado = elemento[0];
             Integer[] nuevoElemento = new Integer[elemento.length - 1];
-            // Se copian los elementos a partir del segundo elemento del array original al nuevo array.
+            //Se copian los elementos a partir del segundo elemento
             System.arraycopy(elemento, 1, nuevoElemento, 0, elemento.length - 1);
-            // Se asigna el nuevo array al atributo elemento.
             elemento = nuevoElemento;
         }
         return eliminado;
@@ -74,6 +73,6 @@ public class Cola {
 //Inspirats en exercici resolt 7.11  i 7.12
 
 //Coses que millorar:
-//Eliminar --> elimine directamente el primero
+//Eliminar --> elimine directamente el primero -- >ok
 //Mostrar primero y ultimo --> OK
 
