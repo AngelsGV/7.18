@@ -7,17 +7,18 @@ public class Cola {
     int ultimo;
     //Especificació (?) No tengo claro si en este ejercicio se debería hacer así o no.
     public Cola(){
+        //Redimensionaremos la tabla según nos haga falta.
     elemento = new Integer[0];
     }
-    void insertarFinal(Integer nuevo){
-        elemento = Arrays.copyOf(elemento,elemento.length +1);
-        elemento[elemento.length-1] = nuevo;
-    }
-    void insertarFinal(Cola otraCola){
-        int tamIni = elemento.length; //Tamaño inicial de la cola
-        elemento = Arrays.copyOf(elemento,elemento.length + otraCola.elemento.length);
-        System.arraycopy(otraCola.elemento, 0, elemento, tamIni, otraCola.elemento.length);
-    }
+   // void insertarFinal(Integer nuevo){
+     //   elemento = Arrays.copyOf(elemento,elemento.length +1);
+       // elemento[elemento.length-1] = nuevo;
+   // }
+    //void insertarFinal(Cola otraCola){
+      //  int tamIni = elemento.length; //Tamaño inicial de la cola
+       // elemento = Arrays.copyOf(elemento,elemento.length + otraCola.elemento.length);
+        //System.arraycopy(otraCola.elemento, 0, elemento, tamIni, otraCola.elemento.length);
+    //}
     //Insertar parametros al final y expandir la tabla.
     void insertar (Integer nuevo){
         elemento=Arrays.copyOf(elemento,elemento.length+1);
@@ -28,7 +29,7 @@ public class Cola {
     Integer eliminar(int primero){
         Integer eliminado = null;
         if (primero >= 0 && primero < elemento.length){
-            eliminado = elemento[primero];
+            eliminado = elemento[0];
             for( int i = primero + 1; i< elemento.length; i++){
                 elemento[i-1] = elemento[i];
             }
